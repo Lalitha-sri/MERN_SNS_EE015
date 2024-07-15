@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="Description" content="Enter your description here"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/css/bootstrap.min.css">
+<title>Title</title>
+</head>
+
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        *,*::before,*::after{
+            box-sizing: inherit;
+        }
+        html{
+            font-size: 16px;
+            font-family: sans-serif;
+            line-height: 1.5;
+            text-size-adjust: 100%;
+            box-sizing: border-box;
+        }
+        #para{
+            width: 600px;
+        }
+        #th{
+            width: 600px;
+        }
+        </style>
+<body>
+    <h1 id="h" class="bg-warning">The contextMenu</h1>
+    <p id="para" class="lead text-success ms-5 bg-dark">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quidem, laboriosam.</p>
+<script>
+        let menu = null;
+        document.addEventListener('DOMContentLoaded', function(){
+            //make sure the right click menu is hidden
+            menu = document.querySelector('.menu');
+            menu.classList.add('off');
+        })
+     
+            menu = document.querySelector('.menu');
+            menu.classList.add('off');
+            //add the right click listener to the box
+            let box = document.getElementById('box');
+            box.addEventListener('contextmenu', showmenu);
+           
+            //add a listener for leaving the menu and hiding it
+            menu.addEventListener('mouseleave', hidemenu);
+           
+            //add the listeners for the menu items
+            addMenuListeners();
+        ;
+       
+        function addMenuListeners(){
+            document.getElementById('red').addEventListener('click', setColour);
+            document.getElementById('gold').addEventListener('click', setColour);
+            document.getElementById('green').addEventListener('click', setColour);
+        }
+       
+        function setColour(ev){
+            hidemenu();
+            let clr = ev.target.id;
+            document.getElementById('box').style.backgroundColor = clr;
+        }
+       
+        function showmenu(ev){
+            ev.preventDefault();
+            //show the custom menu
+            // console.log( ev.clientX, ev.clientY );
+            menu.style.top = `${ev.clientY }px`;
+            menu.style.left = `${ev.clientX }px`;
+            menu.classList.remove('off');
+        }
+       
+        function hidemenu(ev){
+            menu.classList.add('off');
+            menu.style.top = '-200%';
+            menu.style.left = '-200%';
+        }
+
+        
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/js/bootstrap.min.js"></script>
+</body>
+</html>
