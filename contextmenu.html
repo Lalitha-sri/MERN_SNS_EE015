@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="Description" content="Enter your description here"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/css/bootstrap.min.css">
+<title>Title</title>
+</head>
+
+    <style>
+        #para{
+            width: 600px;
+        }
+        #th{
+            width: 600px;
+        }
+        </style>
+<body>
+    <h1 id="h" class="bg-warning">The contextMenu</h1>
+    <p id="para" class="lead text-success ms-5 bg-dark">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quidem, laboriosam.</p>
+<script>
+     window.addEventListener('DOMContentLoaded',greet)
+     function greet(){
+        console.log("I am an Event Listener")
+     }
+     const paraEve = document.getElementById('para');
+    paraEve.addEventListener('contextmenu',function(event){
+        event.preventDefault();
+        console.log(event);
+
+        console.log('Right Clicked on paragraph')
+     });
+
+     const head1 =document.getElementById('h')
+     head1.addEventListener('contextmenu',function(event){
+        event.preventDefault();
+        console.log(event);
+        console.log('Right Clicked on Heading')
+     })
+
+
+
+
+
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/js/bootstrap.min.js"></script>
+</body>
+</html>
+
+
+
+
