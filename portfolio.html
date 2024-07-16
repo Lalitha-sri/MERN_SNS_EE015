@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: aqua;
+}
+
+header {
+    background: rgb(59, 58, 58);
+    color: white;
+    padding: 10px 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+section {
+    padding: 20px;
+    margin: 10px 0;
+    background: white;
+    border-radius: 5px;
+}
+
+.project {
+    margin: 10px 0;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin: 5px 0;
+}
+
+input, textarea, button {
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid rgb(59, 58, 58)c;
+    border-radius: 5px;
+}
+
+button {
+    background: rgb(59, 58, 58);
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    background: rgb(69, 69, 69);
+}
+
+
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section id="home">
+        <h1>LALITHASRI S</h1>
+        <p>I'm an Analytical thinker,who is seeking a challenging position in a reputable organization to elevate and apply my learning skills and Knowledge. With a remarkable command of communication .I am wholeheartedly enthusiatic about immersing myself in real-world experiences,further fueling my passion for professional growth.</p>
+    </section>
+    
+    <section id="about">
+        <p><h2>About Me</h2>
+            <h3>Education</h3>
+            <ul><LI>B.E-(EEE) 2021-2025 - CGPA -8.02(Till 4th sem)</LI>SNS  college of Engineering ,Coimbatore-641107<li>HSC (2020-2021)-percentage : 87.4</li>Govt.Girls.Hr.Sec.School,Bagalur-635103<li>SSLC (2018-2019)-percentage : 87.4</li>Govt.Girls.Hr.Sec.School,Bagalur-635103</li></ul>
+    </p>
+    </section>
+    
+    <section id="projects">
+        <h2>Projects</h2>
+        <div class="project">
+            <h3>Project 1</h3>
+            <p><a href ="calculator.html">Calculator</a></p>
+        </div>
+        <div class="project">
+            <h3>Project 2</h3>
+            <p><a href ="phscale.html">PH scale</a></p>
+        </div>
+        <div class="project">
+            <h3>Project 3</h3>
+            <p><a href ="keyboard.html">Keyboard</a></p>
+        </div>
+    </section>
+    
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <form id="contact-form">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea>
+            
+            <button type="submit">Send</button>
+        </form>
+    </section>
+
+    <script>
+
+
+    </script>
+
+</body>
+</html>
